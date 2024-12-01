@@ -94,7 +94,6 @@ UnrealIRCd 3.2.8.1 https://www.exploit-db.com/exploits/16922
 
 BIND 9.4.1 < 9.4.2 https://www.exploit-db.com/exploits/6122
 
-
 ---
 ## Задание 2
 Проведите сканирование Metasploitable в режимах SYN, FIN, Xmas, UDP.
@@ -110,3 +109,18 @@ BIND 9.4.1 < 9.4.2 https://www.exploit-db.com/exploits/6122
 Приведите ответ в свободной форме.
 
 ### Ответ:
+
+Для выполнения задания, будем выполнять последовательно команды:
+
+# SYN-сканирование
+nmap -sS 192.168.1.82
+
+# FIN-сканирование
+nmap -sF 192.168.1.82
+
+# Xmas-сканирование
+nmap -sX 192.168.1.82
+
+# UDP-сканирование
+nmap -sU 192.168.1.82
+
