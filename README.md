@@ -24,6 +24,44 @@
 
 ### Ответ:
 
+Для выполнения заданий были использованы 2 ВМ:
+
+Машина "разведчик" с установленной ОС Kali-Linux 2024.3 (192.168.1.140)
+
+Машина "жертва" (Metasploitable) с ОС полной неожиданностей и уязвимостей (192.168.1.82)
+
+
+После скачивания, установки и запуска ВМ жертвы, производим сканирование уязвимостей с ВМ разведчика:
+```
+sudo nmap -sV 192.168.1.82
+```
+<img src = "img/01.png" width = 100%>
+
+Из вывода nmap видно, что на машине **Metasploitable** открыты следующие порты и службы:
+
+FTP (vsftpd 2.3.4) - Порт 21
+SSH (OpenSSH 4.7p1 Debian 8ubuntu1) - Порт 22
+Telnet (Linux telnetd) - Порт 23
+SMTP (Postfix smtpd) - Порт 25
+DNS (BIND 9.4.2) - Порт 53
+HTTP (Apache httpd 2.2.8) - Порт 80
+RPCbind - Порт 111
+Samba (smbd 3.X - 4.X) - Порты 139, 445
+Netkit rsh rexecd - Порт 512
+Login (OpenBSD or Solaris rlogind) - Порт 513
+TCPwrapped (не указан сервис) - Порт 514
+Java RMI (GNU Classpath grmiregistry) - Порт 1099
+Bindshell (Metasploitable root shell) - Порт 1524
+NFS (RPC 2-4) - Порт 2049
+FTP (ProFTPD 1.3.1) - Порт 2121
+MySQL (MySQL 5.0.51a-3ubuntu5) - Порт 3306
+PostgreSQL (PostgreSQL DB 8.3.0 - 8.3.7) - Порт 5432
+VNC (protocol 3.3) - Порт 5900
+X11 - Порт 6000
+IRC (UnrealIRCd) - Порт 6667
+Apache Jserv (AJP13) - Порт 8009
+Apache Tomcat (Coyote JSP engine 1.1) - Порт 8180
+
 ---
 ## Задание 2
 Проведите сканирование Metasploitable в режимах SYN, FIN, Xmas, UDP.
