@@ -37,6 +37,9 @@ sudo nmap -sV 192.168.1.82
 ```
 <img src = "img/01.png" width = 100%>
 
+
+Какие сетевые службы в ней разрешены?
+
 Из вывода nmap видно, что на машине **Metasploitable** открыты следующие порты и службы:
 
 FTP (vsftpd 2.3.4) - Порт 21
@@ -53,13 +56,13 @@ HTTP (Apache httpd 2.2.8) - Порт 80
 
 RPCbind - Порт 111
 
-Samba (smbd 3.X - 4.X) - Порты 139, 445
-
+Samba ( 3.X - 4.X) - Порты 139, 445
+smbd
 Netkit rsh rexecd - Порт 512
 
 Login (OpenBSD or Solaris rlogind) - Порт 513
 
-TCPwrapped (не указан сервис) - Порт 514
+TCPwrapped - Порт 514
 
 Java RMI (GNU Classpath grmiregistry) - Порт 1099
 
@@ -82,6 +85,15 @@ IRC (UnrealIRCd) - Порт 6667
 Apache Jserv (AJP13) - Порт 8009
 
 Apache Tomcat (Coyote JSP engine 1.1) - Порт 8180
+
+Какие уязвимости были вами обнаружены? (список со ссылками: достаточно трёх уязвимостей)
+
+vsftpd 2.3.4  https://www.exploit-db.com/exploits/17491
+
+UnrealIRCd 3.2.8.1 https://www.exploit-db.com/exploits/16922
+
+BIND 9.4.1 < 9.4.2 https://www.exploit-db.com/exploits/6122
+
 
 ---
 ## Задание 2
